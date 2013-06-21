@@ -23,6 +23,6 @@ defmodule ApplicationRouter do
     if conn.params[:pwd] == @password do
       conn = conn.assign(:location, conn.params[:where])
     end
-    render conn, "index.html"
+    redirect conn, to: "/"
   end
 end
