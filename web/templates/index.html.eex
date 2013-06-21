@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title><%= @title %></title>
+</head>
+<body>
+  <h1>Where will Andy be today?</h1>
+  <h2><%= @location %></h2>
+  <hr>
+  <h3>If you're Andy, tell us where you'll be</h3>
+  <form name="input" action="/where" method="post">
+      <input type="radio" name="where" value="work">Work<br>
+      <input type="radio" name="where" value="radio">Radio<br>
+      Password: <input type="password" name="pwd">
+      <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
