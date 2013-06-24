@@ -14,7 +14,7 @@ defmodule WhereIsAndy.Mixfile do
   # Configuration for the OTP application
   def application do
     [ applications: [:cowboy, :dynamo],
-      mod: { WhereIsAndy, [] } ]
+      mod: { WhereIsAndy, "unknown" } ]
   end
 
   defp deps do

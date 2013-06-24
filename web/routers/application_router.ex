@@ -16,13 +16,17 @@ defmodule ApplicationRouter do
 
   get "/" do
     conn = conn.assign(:title, "Welcome to Dynamo!")
+    #:gen_server.call(self, :new_location)
+    location = :gen_server.call(:where_is_andy, :get_location)
+    conn = conn.assign(:location, location)
     render conn, "index.html"
   end
 
   post "/where" do
     if conn.params[:pwd] == @password do
-      conn = conn.assign(:location, conn.params[:where])
+      :gen_server.call(:where_is_andy, {:new_location, conn.params[:where]})
     end
     redirect conn, to: "/"
   end
 end
+
