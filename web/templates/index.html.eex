@@ -11,6 +11,7 @@
   <form name="input" action="/where" method="post">
       <input type="radio" name="where" value="work">Work<br>
       <input type="radio" name="where" value="radio">Radio<br>
+      <input type="radio" name="where" value="secret location">Secret Location<br>
       Password: <input type="password" name="pwd">
       <input type="submit" value="Submit">
   </form>
